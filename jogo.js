@@ -26,4 +26,22 @@ const criar = () => {
     } else {
         console.log("Dados inválidos! ")
     }
+};
+
+const leitura = () => {
+    if(jogos.length == 0 ) {
+        console.log("Nenhum jogo encontrado")
+    } else {
+        jogos.forEach((jogo, indice) => {
+            console.log(`
+                ${indice + 1}.
+                Nome: ${jogo.nome}
+                Ano de Lancamento: ${jogo.ano_lancamento}
+                Duracao: ${jogo.duracao}
+                Preco: ${jogo.preco}
+                Estudio: ${jogo.estudio}
+                Sequencia: ${jogo.sequencia}
+            `)
+        })
+    }
 }
